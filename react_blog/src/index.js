@@ -6,7 +6,8 @@ import App from './App'; //App 파일을 가지고 옵니다
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App /> 
   </React.StrictMode>
 );
+
 
