@@ -5,7 +5,13 @@ function App() {
   const [time, setTime] = useState(1);
   
   const handleClick = () => {
-    setTime(time+1);
+    let newTime;
+    if(time === 12) {
+      newTime = 1;
+    } else {
+      newTime = time +1; 
+    }
+    setTime(newTime);
   };
 
   return (
