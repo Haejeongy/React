@@ -25,4 +25,7 @@
 //     React.createElement(Expenses, { items:expenses})
 // );
 
-// wrapper을 꼭 가져야 하는 이유
+// 이것이 wrapper을 꼭 가져야 하는 이유 !!
+
+// 컴포넌트 저장하기
+

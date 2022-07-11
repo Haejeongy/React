@@ -1,7 +1,7 @@
 //리액트에 있는 컴포넌트는 오직 자바스크립트 함수다
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
-import Card from './Card';
+import Card from "../UI/Card";
 
 function ExpenseItem(props) {
   return (
