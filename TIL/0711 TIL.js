@@ -29,3 +29,9 @@
 
 // 컴포넌트 저장하기
 
+// syntax
+// arrow function 
+// 상수형으로 선언 
+// const App = () => {
+//     return 
+// }
