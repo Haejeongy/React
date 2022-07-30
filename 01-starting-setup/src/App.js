@@ -1,4 +1,6 @@
+import React from "react";
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./NewExpense/NewExpense";
 
 function App() {
   const expenses = [
@@ -25,7 +27,7 @@ function App() {
 
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense />
       <Expenses items={expenses} />
     </div>
   );
@@ -33,4 +35,4 @@ function App() {
 
 export default App;
 
-//29번째 줄
+//expense를 눌렀을 때
