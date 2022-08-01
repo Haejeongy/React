@@ -14,3 +14,8 @@ const titleChangeHandler = (event) => {
 
 
 <input type="text" onChange={titleChangeHandler} />
+
+
+// 자 그래서 이 event.target.value를 어떻게 사용하느냐?
+// useState를 사용하여 변경 된 값을 저장해주자
+// 그래야 컴포넌트함수가 재렌더링(리턴)이 되어도 그 값은 저장되어 살아있을 수 있으니까
