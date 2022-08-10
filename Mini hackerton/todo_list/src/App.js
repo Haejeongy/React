@@ -3,11 +3,13 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import TodoList from './component/TodoList';
+import Sidebar from './Sidebar';
 const App = () => {
   return (
     <div>
       <BrowserRouter>
         <div>
+          <Sidebar/>
           <main>
             <TodoList></TodoList>
           </main>
