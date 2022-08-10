@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+//npm install로 npm router은 안받아졌다
+//npm i react-router-dom 이걸로 다운받자
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import TodoList from './component/TodoList';
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <div>
+          <main>
+            <TodoList></TodoList>
+          </main>
+        </div>
+      </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
