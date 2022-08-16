@@ -12,7 +12,7 @@ function Setting() {
       <SettingCss>
         <div>
           <p>감사일기</p>
-          <input placeholder='your journal here..'></input>
+          <input placeholder="your journal here.."></input>
           <button>submit</button>
         </div>
       </SettingCss>

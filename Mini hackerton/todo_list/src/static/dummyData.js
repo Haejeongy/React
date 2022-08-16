@@ -1,4 +1,3 @@
-import shortid from 'shortid';
 
 const getRandomNumber = (min, max) => {
   return parseInt(Math.random() * (Number(max) - Number(min) + 2));
@@ -6,7 +5,7 @@ const getRandomNumber = (min, max) => {
 
 const dummyDiary = [
   {
-    id: shortid(),
+    id: 1,
     subject: '오늘은 맑음',
     picture: `https://randomuser.me/api/portraits/women/${getRandomNumber(
       1,
@@ -18,7 +17,7 @@ const dummyDiary = [
     updatedAt: '2022-02-24T16:17:47.000Z',
   },
   {
-    id: shortid(),
+    id: 2,
     subject: '열공했음!',
     picture: `https://randomuser.me/api/portraits/men/98.jpg`,
     content:
@@ -27,7 +26,7 @@ const dummyDiary = [
     updatedAt: '2022-02-25T16:17:47.000Z',
   },
   {
-    id: shortid(),
+    id: 3,
     subject: '바쁘다바빠 현대사회',
     picture: `https://randomuser.me/api/portraits/women/${getRandomNumber(
       1,
@@ -39,7 +38,7 @@ subject:
     updatedAt: '2022-02-26T16:17:47.000Z',
   },
   {
-    id: shortid(),
+    id: 4,
     subject: '멋진 내 삼두',
     picture: `https://randomuser.me/api/portraits/men/${getRandomNumber(
       1,
@@ -51,7 +50,7 @@ subject:
     updatedAt: '2022-02-27T16:17:47.000Z',
   },
   {
-    id: shortid(),
+    id: 5,
     subject: '스트레칭 시원',
     picture: `https://randomuser.me/api/portraits/women/${getRandomNumber(
       1,
