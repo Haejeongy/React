@@ -3,7 +3,7 @@ const getRandomNumber = (min, max) => {
   return parseInt(Math.random() * (Number(max) - Number(min) + 2));
 };
 
-const dummyDiary = [
+const DummyDiary = [
   {
     id: 1,
     subject: '오늘은 맑음',
@@ -63,4 +63,4 @@ subject:
   },
 ];
 
-export default dummyDiary;
+export default DummyDiary;

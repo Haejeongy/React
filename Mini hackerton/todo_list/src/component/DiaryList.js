@@ -1,21 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import DummyDiary from "../static/DummyData";
 
-const DiaryListCss = styled.div`
-  display: flex;
-  justify-content: center;
-`;
+const DiaryListCss = styled.div``;
 
 function DiaryList() {
   return (
     <section>
-      <DiaryListCss>
-        <div>
-          <p>감사일기</p>
-          <input placeholder='your journal here..'></input>
-          <button>submit</button>
-        </div>
-      </DiaryListCss>
     </section>
   );
 }

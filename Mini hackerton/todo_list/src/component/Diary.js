@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import dummyData from "../static/dummyData";
+import DummyData from "../static/DummyData";
 import DiaryList from "../component/DiaryList";
 
 const DiaryCss = styled.div`
@@ -21,25 +21,9 @@ const DiaryCss = styled.div`
 `;
 
 function Diary() {
-  const [subject, setSubject] = useState("");
-  const [diaries, setDiary] = useState(dummyData);
-  const [msg, setMsg] = useState("");
 
-  const handleButtonClick = (event) => {
-    const diary = {
-      id: 1,
-      subject: subject,
-      picture: "https://randomuser.me/api/portraits/men/98.jpg",
-      content: msg,
-      createdAt: new Date().toLocaleDateString("ko-KR"),
-      updatedAt: new Date().toLocaleDateString("ko-KR"),
-    };
-    const newDiaries = [diary, ...diaries];
-    setDiary(newDiaries);
-  };
-  const handleChangeMsg = (event) => {
-    setMsg(event.target.value);
-  };
+  const [diaryInput, setDiaryInput] = useState("")
+  
 
   return (
     <section>
@@ -47,7 +31,7 @@ function Diary() {
         <div className="diary_container">
           <div className="diary_wrapper">
             <div className="diary_uploadFile">
-              <img>내가 올린 이미지</img>
+              <p>내가 올린 이미지</p>
               <div className="diary_summit">
                 <input type="file"></input>
               </div>
@@ -55,15 +39,14 @@ function Diary() {
             <div className="diary_inputcontainer">
               <div className="diary_inputwrapper">
                 <div className="diary_forminput">
-                  <input value={subject} placeholder="subject of today"></input>
+                  <input placeholder="subject of today"></input>
                   <textarea
-                    onChange={handleChangeMsg}
                     placeholder="How's your day?"
                   ></textarea>
                 </div>
               </div>
               <div>
-                <button className="diaryButton" onClick={handleButtonClick}>
+                <button className="diaryButton">
                   submit
                 </button>
               </div>
@@ -73,7 +56,10 @@ function Diary() {
       </DiaryCss>
       <div>
         <ul>
-          나의 오늘은...
+          오늘의 감사일기
+          <li>
+          </li>
+
           <DiaryList />
         </ul>
       </div>
