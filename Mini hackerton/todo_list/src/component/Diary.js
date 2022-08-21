@@ -21,9 +21,20 @@ const DiaryCss = styled.div`
 `;
 
 function Diary() {
+  const [diaryInput, setDiaryInput] = useState("");
+  const [nextId, setNextId] = useState(6);
+  const [diaries, setDiaries] = useState(DummyData);
 
-  const [diaryInput, setDiaryInput] = useState("")
-  
+  const buttonHandler = (event) => {
+    const newDiary = {
+      id: nextId,
+      createdAt: new Date().toLocaleDateString("ko-KR"),
+      updatedAt: new Date().toLocaleDateString("ko-KR"),
+    };
+
+    const newDiaries = [newDiary, ...diaries];
+    setDiaries(newDiaries);
+  };
 
   return (
     <section>
@@ -39,14 +50,16 @@ function Diary() {
             <div className="diary_inputcontainer">
               <div className="diary_inputwrapper">
                 <div className="diary_forminput">
-                  <input placeholder="subject of today"></input>
-                  <textarea
-                    placeholder="How's your day?"
-                  ></textarea>
+                  <p>
+                    <input placeholder="subject of today"></input>
+                  </p>
+                  <p>
+                    <textarea placeholder="How's your day?"></textarea>
+                  </p>
                 </div>
               </div>
               <div>
-                <button className="diaryButton">
+                <button className="diaryButton" onClick={buttonHandler}>
                   submit
                 </button>
               </div>
@@ -57,9 +70,7 @@ function Diary() {
       <div>
         <ul>
           오늘의 감사일기
-          <li>
-          </li>
-
+          <li></li>
           <DiaryList />
         </ul>
       </div>
