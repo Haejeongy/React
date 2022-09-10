@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+//리덕스 리액트에 꼭 필요한 4가지 기능
+//import {Provider, useSelector, useDispatch, connect} from 'react-redux';
+
+
+//1. Provider : 스테이트를 어떤 컴포넌트에 제공할 것인가의 큰 그림 props로 store를 써주어야 한다
+//2. useSelector : 스테이트 함수를 인자로 받음. 그리고 넘겨줄 값을 저장함
+//3. useDispatch : 타입을 액션으로 전달해줌 ex) {type : plus}
+
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.js"></script>
+  </head>
+
+  <body>
+    <script>
+      //reducer?
+      //디스패치를 통해 action 값이 들어오면,
+      //action값과 기존에 있던 state 값을 참조해 새로운 state 값을 만들어줌
+
+      //state의 불변성을 유지하기 위해서 한번 복사해줘야 한다
+      function reducer(currentState, action) {
+        const newState = {...currentState} //복사
+        if(action.type === plus) {
+            return newState.number ++
+        }
+        // return newState
+
+        //기본 초깃값 설정
+        // if (state === undefined) {
+        //   return { color: "yellow" }; //초깃값 설정
+        }
+      //store 만들기
+      const store = Redux.createStore(reducer);
+      console.log(store.getState());
+    </script>
+  </body>
+</html>
